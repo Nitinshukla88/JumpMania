@@ -1,3 +1,5 @@
+score=0
+canjump = true;
 document.onkeydown= function(e){
     console.log(e.keyCode)
     if(e.keyCode==38){
@@ -34,5 +36,17 @@ setInterval(() => {
 
     if(diffX<60 && diffY<50){
         Enemy.classList.remove('movingenemy')
+    }else if(diffX<100 && canjump){
+        score+=1
+        displayscore(score)
+        canjump = false
+        setTimeout(() => {
+            canjump  = true
+        }, 200);
     }
 }, 100);
+
+function displayscore(score){
+    scoreelement = document.querySelector('.points')
+    scoreelement.innerHTML = "Score: "+ score
+}
