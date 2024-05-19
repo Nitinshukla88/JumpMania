@@ -43,6 +43,13 @@ setInterval(() => {
         setTimeout(() => {
             canjump  = true
         }, 200);
+        setTimeout(()=>{
+            animeduration = parseInt(window.getComputedStyle(Enemy,null).getPropertyValue('animation-duration'))
+            newduration = animeduration-0.1
+            Enemy.style.animationDuration = newduration +'s'
+        },500)
+        
+
     }
 }, 100);
 

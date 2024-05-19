@@ -51,7 +51,7 @@
 }
 
 .movingenemy{
-    animation: moveenemy 2s linear infinite;
+    animation: moveenemy 4s linear infinite;
 }
 
 @keyframes moveenemy {
