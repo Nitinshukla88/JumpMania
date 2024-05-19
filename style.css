@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    overflow: hidden;
+}
+
 .container{
     background-image: url("Background.jpg");
     height: 100%;
@@ -31,7 +35,7 @@
     background-size: cover;
     position: absolute;
     bottom: 80px;
-    right: 0;
+    left: 220vh;
 }
 
 .animatedplayer{
@@ -43,7 +47,7 @@
         bottom:80px
     }
     50%{
-        bottom:230px
+        bottom:320px;
     }
     100%{
         bottom:80px
@@ -56,9 +60,9 @@
 
 @keyframes moveenemy {
     0%{
-        right: 0vh;
+        left: 240vh;
     }
     100%{
-        right: 230vh;
+        left: -40vh;
     }
 }

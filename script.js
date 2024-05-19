@@ -34,24 +34,17 @@ setInterval(() => {
     diffX= Math.abs(ex-px)
     diffY= Math.abs(ey-py)
 
-    if(diffX<60 && diffY<50){
+    if(diffX<50 && diffY<52){
         Enemy.classList.remove('movingenemy')
-    }else if(diffX<100 && canjump){
+    }else if(diffX<130 && canjump){
         score+=1
         displayscore(score)
         canjump = false
         setTimeout(() => {
             canjump  = true
-        }, 200);
-        setTimeout(()=>{
-            animeduration = parseInt(window.getComputedStyle(Enemy,null).getPropertyValue('animation-duration'))
-            newduration = animeduration-0.1
-            Enemy.style.animationDuration = newduration +'s'
-        },500)
-        
-
+        }, 1000);
     }
-}, 100);
+}, 10);
 
 function displayscore(score){
     scoreelement = document.querySelector('.points')
