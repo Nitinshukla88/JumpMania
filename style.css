@@ -66,3 +66,12 @@ body{
         left: -40vh;
     }
 }
+
+.gameover{
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 20px;
+    padding-top: 50px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
