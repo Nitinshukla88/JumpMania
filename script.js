@@ -46,6 +46,11 @@ setInterval(() => {
 
     if(diffX<50 && diffY<52){
         Enemy.classList.remove('movingenemy')
+        gameelement = document.querySelector('.gameover')
+        gameelement.innerHTML= "Game Over"
+        points = document.querySelector('.points')
+        points.style.visibility="hidden"
+        
         gamesound.pause()
         play = false
         gameoversound.play()
