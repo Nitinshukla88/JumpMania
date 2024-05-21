@@ -1,6 +1,5 @@
 score=0
 canjump = true
-
 play = true
 
 gamesound = new Audio('gamesound.mp3')
@@ -61,6 +60,11 @@ setInterval(() => {
 
         newdiv=document.createElement('div')
         newdiv.innerHTML=text
+        newdiv.style.color="rgb(201, 46, 72)"
+        newdiv.style.textAlign="center"
+        newdiv.style.fontSize="2.5rem"
+        newdiv.style.fontWeight="bold"
+        newdiv.style.textShadow="2px 4px 4px rgba(216, 52, 161, 0.6)"
         parent.appendChild(newdiv)
         points.style.visibility="hidden"
         gamesound.pause()
