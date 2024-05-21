@@ -9,6 +9,8 @@ document.onkeydown= function(e){
     setTimeout(() => {
         if(play==true){
             gamesound.play()
+            gameo= document.querySelector('.gameover')
+            gameo.style.visibility="hidden"
         }
     }, 200);
     console.log(e.keyCode)
@@ -48,9 +50,19 @@ setInterval(() => {
         Enemy.classList.remove('movingenemy')
         gameelement = document.querySelector('.gameover')
         gameelement.innerHTML= "Game Over"
-        points = document.querySelector('.points')
-        points.style.visibility="hidden"
+        gameelement.style.visibility="visible"
+        var points = document.querySelector('.points')
+        var textcon=points.textContent
+        var arrofvalue = textcon.split(":")
+        var realvalue =arrofvalue[1]
+        var text= "Your Score is "+realvalue
         
+        parent = document.querySelector('.container')
+
+        newdiv=document.createElement('div')
+        newdiv.innerHTML=text
+        parent.appendChild(newdiv)
+        points.style.visibility="hidden"
         gamesound.pause()
         play = false
         gameoversound.play()
